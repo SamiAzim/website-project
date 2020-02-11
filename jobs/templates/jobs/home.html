@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+{% load static %}
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -35,7 +36,7 @@
         <a class="nav-link" href="#">Projects</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Resume</a>
+        <a class="nav-link" href="{% static 'SamiOfficial.pdf' %}">Resume</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Blog</a>
@@ -57,6 +58,7 @@
       <p>
         <a href="mailto:samiazim@me.com" class="btn btn-primary my-2">Contact Me</a>
       </p>
+      <img class="card-img" src="{% static 'IMG_6204.jpg' %}"/>
     </div>
   </section>
 
@@ -67,7 +69,7 @@
         {% for job in jobs.all %}
         <div class="col-md-4">
           <div class="card mb-4 shadow-sm">
-            <img class="card-img-top" width=255 height=400 src="{{job.image.url}}" />
+            <img class="card-img-top" width=255 height=500 preserveAspectRatio="xMidYMid slice" src="{{job.image.url}}" />
             <div class="card-body">
               <p class="card-text">{{job.summary}}</p>
             </div>

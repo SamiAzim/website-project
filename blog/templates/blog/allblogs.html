@@ -53,10 +53,19 @@
     <br />
     <h2>Latest Posts</h2>
     <hr />
-    
-    {% for blog in blogs.all %}
-    {{blogs.image}}
-    {% endfor %}
+    {% for blog in blog.all %}
+    <div class="col-md-4">
+      <div class="card mb-4 shadow">
+        <div class="card-body">
+          <a href=""><h5 class="card-title">{{blog.title}}</h5></a>
+          {{ blog.date_special }}
+          <img class="card-img-bottom" src="{{blog.image.url}}" height=400/>
+          <p class="card-text">{{blog.summary}}</p>
+        </div>
+      </div>
+    </div>
+    <br />
+  {% endfor %}
   </div>
 </main>
 

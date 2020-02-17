@@ -14,3 +14,10 @@ class Blog(models.Model):
 
     def date_special(self):
         return self.pub_date.strftime('%b %e %Y')
+
+    def image_size(self):
+        if self.image.height < self.image.width:
+            print(self.image.width)
+            return self.image.width
+        else:
+            return self.image.height

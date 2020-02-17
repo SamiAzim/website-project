@@ -56,16 +56,16 @@
   <div class="container p-5 bg-light">
     <div class="container">
 
-      <div class="row">
+      <div class="card-columns">
         {% for job in jobs.all %}
-        <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-            <img class="card-img-top" width=255 height=500 preserveAspectRatio="xMidYMid slice" src="{{job.image.url}}" />
+        <!-- <div class="col-md-4"> -->
+          <div class="card w-100 shadow-sm">
+            <img class="card-img-top" preserveAspectRatio="xMidYMid slice" src="{{job.image.url}}" />
             <div class="card-body">
               <p class="card-text">{{job.summary}}</p>
             </div>
           </div>
-        </div>
+        <!-- </div> -->
         {% endfor %}
       </div>
     </div>
